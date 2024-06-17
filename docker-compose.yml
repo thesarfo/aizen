@@ -2,8 +2,8 @@ version: "3.8"
 services:
   db:
     hostname: 127.0.0.1
-    container_name: pgdatabase
-    image: thesarfo/pgvector
+    container_name: dbpg
+    image: ankane/pgvector
     env_file: .env
     ports:
       - ${DB_PORT}:5432
