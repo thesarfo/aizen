@@ -1,16 +1,12 @@
 import { Router, Response } from "express";
 
-// schemas
 import { LoginFormSchema, SignupFormSchema } from "@/schemas/auth/forms";
 
-// validators
 import { validateSchema } from "@/schemas/validator";
 
-// types
 import type { LoginFormSchemaType, SignupFormSchemaType } from "@/schemas/auth/forms";
 import type { CustomRequest } from "@/types/common/requests";
 
-// services
 import { UsersService } from "@/services/users.service";
 import { encrypt } from "@/helpers/encrypt";
 

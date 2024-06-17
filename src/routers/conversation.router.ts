@@ -5,10 +5,8 @@ import { ConversationsService } from "@/services/conversation.service";
 export const router = Router();
 router.use(authRequiredMiddleware);
 
-// services
 const conversationsService = new ConversationsService();
 
-//
 router.get("/", async (request: Request, response: Response) => {
   const user = request.user;
   const { limit = 100, offset = 0 } = request.params;
@@ -28,7 +26,6 @@ router.get("/", async (request: Request, response: Response) => {
   });
 });
 
-//
 router.post("/", async (request: Request, response: Response) => {
   const user = request.user;
   const conversation = {
